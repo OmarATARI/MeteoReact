@@ -1,11 +1,16 @@
 import React from 'react'
-import SearchBar from "./SearchBar";
 
-const Today = () => (
+const Today = ({temp, wind, conditions}) => (
     <section className="today_section">
         <div>
-            <h1>Température</h1>
-            <h2>{ SearchBar.state.today.temp }</h2>
+            <h1>Aujourd'hui</h1>
+
+            <h3>Température</h3>
+            <p>{ temp } °C</p>
+            <h3>Vitesse du vent</h3>
+            <p>{ wind } km/h</p>
+            <h3>Conditions</h3>
+            <p>{ conditions }</p>
         </div>
     </section>
 )
